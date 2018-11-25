@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Brocante du Marais</string>
+    <string name="title_activity_camera">Camera</string>
+    <string name="entry1">Entrée 1</string>
+    <string name="entry2">Entrée 2</string>
+    <string name="entry3">Entrée 3</string>
+    <string name="entry4">Entrée 4</string>
+    <string name="entry5">Entrée 5</string>
+    <string name="drop">Effacer la base de données</string>
+    <string name="find">Rechercher</string>
+    <string name="import_data">Importer des données</string>
+    <string name="export_data">Exporter des données</string>
+    <string name="hint">n° + code</string>
+    <string name="request_permission">This sample needs camera permission.</string>
+</resources>
+

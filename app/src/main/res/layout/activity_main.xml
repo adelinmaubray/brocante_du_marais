@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    tools:context="maubray.ami.brocantedumarais.MainActivity">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/padding_title"
+        android:text="@string/app_name"
+        android:textSize="@dimen/size_title"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin"
+        android:layout_marginTop="@dimen/margin"
+        android:textSize="@dimen/size_title"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="..."/>
+
+    <TextView
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toStartOf="@id/total"
+        android:textSize="@dimen/size_title"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="/" />
+
+    <TextView
+        android:id="@+id/scan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_marginTop="@dimen/margin"
+        android:layout_toLeftOf="@id/bar"
+        android:textSize="@dimen/size_title"
+        android:textColor="@color/colorPrimaryDark"
+        android:text="..."/>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/title"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/margin"
+        android:orientation="vertical">
+
+        <RadioButton
+            android:id="@+id/entree_0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="changeEntry"
+            android:text="@string/entry1"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textSize="@dimen/size_radio"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:id="@+id/entree_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeEntry"
+            android:text="@string/entry2"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textSize="@dimen/size_radio"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:id="@+id/entree_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="changeEntry"
+            android:text="@string/entry3"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textSize="@dimen/size_radio"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:id="@+id/entree_3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="changeEntry"
+            android:text="@string/entry4"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textSize="@dimen/size_radio"
+            android:visibility="gone"/>
+
+        <RadioButton
+            android:id="@+id/entree_4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:onClick="changeEntry"
+            android:text="@string/entry5"
+            android:textColor="@color/colorPrimaryDark"
+            android:textColorHighlight="@color/colorPrimary"
+            android:textSize="@dimen/size_radio"
+            android:visibility="gone"/>
+
+
+    </RadioGroup>
+
+    <ImageButton
+        android:id="@+id/button_qr"
+        android:layout_width="@dimen/size_image"
+        android:layout_height="@dimen/size_image"
+        android:layout_below="@id/radio_group"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin"
+        android:background="@drawable/appareil_photo"
+        android:onClick="QrScanner" />
+
+    <EditText
+        android:id="@+id/number_text"
+        android:layout_width="@dimen/size_input"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_add"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="@dimen/margin"
+        android:hint="@string/hint"
+        android:textSize="@dimen/size_input_text" />
+
+    <Button
+        android:id="@+id/button_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@id/number_text"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/margin"
+        android:background="@color/colorPrimary"
+        android:onClick="search"
+        android:padding="@dimen/padding_button"
+        android:text="@string/find"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/size_text" />
+
+    <Button
+        android:id="@+id/button_erase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="@dimen/margin"
+        android:background="@color/colorPrimary"
+        android:onClick="deleteDBAsk"
+        android:padding="@dimen/padding_button"
+        android:text="@string/drop"
+        android:textColor="@color/red"
+        android:textSize="@dimen/size_text" />
+
+    <Button
+        android:id="@+id/button_import"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_erase"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="@dimen/margin"
+        android:background="@color/colorPrimary"
+        android:onClick="importData"
+        android:padding="@dimen/padding_button"
+        android:text="@string/import_data"
+        android:textColor="@color/green"
+        android:textSize="@dimen/size_text" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/button_import"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="@dimen/margin"
+        android:layout_marginEnd="@dimen/margin"
+        android:background="@color/colorPrimary"
+        android:onClick="exportData"
+        android:padding="@dimen/padding_button"
+        android:text="@string/export_data"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/size_text" />
+
+</RelativeLayout>

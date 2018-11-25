@@ -1,0 +1,11 @@
+<resources>
+    <dimen name="padding_title">20sp</dimen>
+    <dimen name="padding_button">20sp</dimen>
+    <dimen name="size_input">180sp</dimen>
+    <dimen name="size_image">350sp</dimen>
+    <dimen name="size_text">18sp</dimen>
+    <dimen name="size_input_text">30sp</dimen>
+    <dimen name="size_radio">35sp</dimen>
+    <dimen name="size_title">50dp</dimen>
+    <dimen name="margin">15dp</dimen>
+</resources>
