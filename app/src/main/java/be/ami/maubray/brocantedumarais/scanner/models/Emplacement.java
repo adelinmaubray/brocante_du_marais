@@ -1,4 +1,4 @@
-package maubray.ami.brocantedumarais;
+package be.ami.maubray.brocantedumarais.scanner.models;
 
 public class Emplacement {
 
@@ -6,7 +6,7 @@ public class Emplacement {
     private String entry;
     private String scan;
     private String code;
-    private int refus;
+    private int refusal;
 
     public Emplacement (){
         this.number = null;
@@ -47,12 +47,12 @@ public class Emplacement {
         this.scan = scan;
     }
 
-    public int getRefus() {
-        return refus;
+    public int getRefusal() {
+        return refusal;
     }
 
-    public void setRefus(int refus) {
-        this.refus = refus;
+    public void setRefusal(int refusal) {
+        this.refusal = refusal;
     }
 
     @Override
@@ -62,7 +62,7 @@ public class Emplacement {
                 ", entry='" + entry + '\'' +
                 ", scan='" + scan + '\'' +
                 ", code='" + code + '\'' +
-                ", refus=" + refus +
+                ", refusal=" + refusal +
                 '}';
     }
 }

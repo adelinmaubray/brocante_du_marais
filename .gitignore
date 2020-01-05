@@ -1,6 +1,9 @@
 /.idea/
 /.gradle/
+/build/
 
+/app/release/
+/app/build/
 /app/app.iml
 ScannerBroncateDuMarais.iml
 

@@ -1,14 +1,14 @@
-package maubray.ami.brocantedumarais;
+package be.ami.maubray.brocantedumarais.scanner.models;
 
 public class Entry {
 
     private String id;
-    private String libelle;
+    private String description;
     private int value;
 
     public Entry() {
         this.id = null;
-        this.libelle = null;
+        this.description = null;
         this.value = 0;
     }
 
@@ -20,12 +20,12 @@ public class Entry {
         this.id = id;
     }
 
-    public String getLibelle() {
-        return libelle;
+    public String getDescription() {
+        return description;
     }
 
-    public void setLibelle(String libelle) {
-        this.libelle = libelle;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public int getValue() {
@@ -40,7 +40,7 @@ public class Entry {
     public String toString() {
         return "Entry{" +
                 "id='" + id + '\'' +
-                ", libelle='" + libelle + '\'' +
+                ", description='" + description + '\'' +
                 ", value=" + value +
                 '}';
     }

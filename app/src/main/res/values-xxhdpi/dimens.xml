@@ -2,7 +2,7 @@
 <resources>
 
     <dimen name="padding_title">15sp</dimen>
-    <dimen name="padding_button">3sp</dimen>
+    <dimen name="padding_button">13sp</dimen>
     <dimen name="size_input">150sp</dimen>
     <dimen name="size_image">200sp</dimen>
     <dimen name="size_text">10sp</dimen>

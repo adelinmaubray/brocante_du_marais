@@ -1,18 +1,17 @@
-package maubray.ami.brocantedumarais;
+package be.ami.maubray.brocantedumarais.scanner.scanner;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
 import android.os.Build;
 import android.os.Bundle;
-import android.support.annotation.RequiresApi;
-import android.support.v7.app.AppCompatActivity;
 
 import com.google.zxing.Result;
 
-import java.nio.ByteBuffer;
-import java.nio.CharBuffer;
-import java.nio.charset.Charset;
+import java.util.Objects;
 
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
+import be.ami.maubray.brocantedumarais.scanner.activity.MainActivity;
 import me.dm7.barcodescanner.zxing.ZXingScannerView;
 
 public class Scanner extends AppCompatActivity implements ZXingScannerView.ResultHandler {
@@ -26,10 +25,16 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        mScannerView = new ZXingScannerView(this);   // Programmatically initialize the scanner view
+        Objects.requireNonNull(getSupportActionBar()).setDisplayHomeAsUpEnabled(false);
+        getSupportActionBar().setTitle("Scannez un QR Code");
+
+        // Programmatically initialize the scanner view
+        mScannerView = new ZXingScannerView(this);
         setContentView(mScannerView);
-        mScannerView.setResultHandler(this); // Register ourselves as a handler for scan results.
-        mScannerView.startCamera();         // Start camera
+
+        // Register ourselves as a handler for scan results.
+        mScannerView.setResultHandler(this);
+        mScannerView.startCamera();
 
         isOnPause = false;
 
@@ -42,8 +47,8 @@ public class Scanner extends AppCompatActivity implements ZXingScannerView.Resul
 
     @Override
     public void handleResult(Result rawResult) {
-        MainActivity.QrCodeRead = rawResult.getText();
-        setResult(1);
+        MainActivity.QR_CODE_READ = rawResult.getText();
+        setResult(MainActivity.RESULT_CODE);
         this.finish();
     }
 
