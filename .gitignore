@@ -1,6 +1,8 @@
 /.idea/
 /.gradle/
+
+/app/app.iml
+ScannerBroncateDuMarais.iml
+
 local.properties
 gradle.properties
-app.iml
-ScannerBrocanteDuMarais.iml
