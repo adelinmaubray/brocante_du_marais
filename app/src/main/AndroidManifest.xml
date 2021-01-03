@@ -23,8 +23,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="be.ami.maubray.brocantedumarais.scanner.activity.MainActivity"
-            android:screenOrientation="portrait">
+            android:name="be.ami.maubray.brocantedumarais.brocscan.activity.MainActivity"
+				android:screenOrientation="portrait">
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,12 +32,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity android:name="be.ami.maubray.brocantedumarais.scanner.scanner.Scanner">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="be.ami.maubray.brocantedumarais.scanner.activity.MainActivity" />
-        </activity>
+	
+		<activity android:name="be.ami.maubray.brocantedumarais.brocscan.scanner.Scanner">
+			<meta-data
+					android:name="android.support.PARENT_ACTIVITY"
+					android:value="be.ami.maubray.brocantedumarais.brocscan.activity.MainActivity" />
+		</activity>
     </application>
 
 </manifest>

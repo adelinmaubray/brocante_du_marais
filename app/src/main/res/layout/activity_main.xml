@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorAccent"
-    android:focusable="true"
-    android:focusableInTouchMode="true"
-    tools:context="be.ami.maubray.brocantedumarais.scanner.activity.MainActivity">
-
-    <TextView
-        android:id="@+id/total"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_marginTop="@dimen/margin"
-        android:layout_marginEnd="@dimen/margin"
-        android:text="..."
-        android:textColor="@color/colorDark"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorAccent"
+		android:focusable="true"
+		android:focusableInTouchMode="true"
+		tools:context="be.ami.maubray.brocantedumarais.brocscan.activity.MainActivity">
+	
+	<TextView
+			android:id="@+id/total"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_alignParentEnd="true"
+			android:layout_marginTop="@dimen/margin"
+			android:layout_marginEnd="@dimen/margin"
+			android:text="..."
+			android:textColor="@color/colorDark"
         android:textSize="@dimen/size_title" />
 
     <TextView
