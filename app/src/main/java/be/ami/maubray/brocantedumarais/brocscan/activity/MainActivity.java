@@ -304,7 +304,7 @@ public class MainActivity extends AppCompatActivity {
 				
 				// Get the time
 				Calendar c = Calendar.getInstance();
-				SimpleDateFormat format = new SimpleDateFormat("HH:mm");
+				SimpleDateFormat format = new SimpleDateFormat("HH:mm:ss");
 				String date = format.format(c.getTime());
 				emplacement.setScan(date);
 				emplacement.setRefusal(0);
