@@ -133,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
 			// QR Code
 			case QR_REQUEST_CODE:
 				if (resultCode == RESULT_CODE) {
-					QR_CODE_READ = QR_CODE_READ.substring(0, QR_CODE_READ.length() - 2);
 					Emplacement emplacement = databaseHandler.selectByCode(QR_CODE_READ);
 					check(emplacement, QR_CODE_READ);
 				}
@@ -216,7 +215,7 @@ public class MainActivity extends AppCompatActivity {
 	 * @param view The view
 	 */
 	@RequiresApi(api = Build.VERSION_CODES.M)
-	public void QrScannerClicked(View view) {
+	public void scannerClicked(View view) {
 		startActivityForResult(new Intent(this, Scanner.class), QR_REQUEST_CODE);
 	}
 	
@@ -251,7 +250,7 @@ public class MainActivity extends AppCompatActivity {
 	 * Check the validity of the databaseHandler (number or code)
 	 *
 	 * @param emplacement The Emplacement to check
-	 * @param code        The retrived code to check
+	 * @param code        The retrieved code to check
 	 */
 	public void check(Emplacement emplacement, String code) {
 		// Variable which check if databaseHandler are valid
@@ -507,11 +506,11 @@ public class MainActivity extends AppCompatActivity {
 	 */
 	public void exportDataClicked(View view) {
 		Calendar c = Calendar.getInstance();
-		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm");
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd_HH-mm-ss");
 		String strDate = sdf.format(c.getTime());
 		
 		// Filename
-		String filename = strDate + " export";
+		String filename = "qr_code_export_" + strDate + ".txt";
 		Intent intent = new Intent(Intent.ACTION_CREATE_DOCUMENT);
 		
 		// Filter to only show results that can be "opened", such as
@@ -536,9 +535,9 @@ public class MainActivity extends AppCompatActivity {
 			int compt = 0;
 			// Select all the emplacements to write them
 			List<Emplacement> emplacements = databaseHandler.selectAllEmplacement();
-			fileOutputStream.write(("N°\tQRCode\tHeure\tRefus\r\n").getBytes());
+			fileOutputStream.write(("N°\tQRCode\tHeure\tRefus\n").getBytes());
 			for (Emplacement emplacement : emplacements) {
-				fileOutputStream.write((emplacement.getNumber() + "\t" + emplacement.getCode() + "\t" + emplacement.getScan() + "\t" + emplacement.getRefusal() + "\t\r\n").getBytes());
+				fileOutputStream.write((emplacement.getNumber() + "\t" + emplacement.getCode() + "\t" + emplacement.getScan() + "\t" + emplacement.getRefusal() + "\n").getBytes());
 				compt++;
 			}
 			

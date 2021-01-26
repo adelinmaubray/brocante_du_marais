@@ -4,7 +4,7 @@ apply plugin: 'kotlin-android'
 android {
     signingConfigs {
         config {
-            storeFile file('D:\\OneDrive\\Documents\\Applications\\keystore_lamimaubray.jks')
+            storeFile file('C:\\Users\\rommesad\\OneDrive - Arhs Cube S.A\\Documents\\Android\\keystore_lamimaubray.jks')
             storePassword 'KeyStore@632781ar'
             keyAlias = 'lamimaubray'
             keyPassword 'KeyStore@632781ar'
@@ -12,11 +12,11 @@ android {
     }
     compileSdkVersion 30
     defaultConfig {
-        applicationId "maubray.ami.brocantedumarais"
+        applicationId "be.ami.maubray.brocantedumarais.brocsan"
         minSdkVersion 23
         targetSdkVersion 30
-        versionCode 20
-        versionName "2.0"
+        versionCode 210
+        versionName "2.1.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {

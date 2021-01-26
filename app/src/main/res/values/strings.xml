@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Scanner Brocante du Marais</string>
+    <string name="app_name">Brocscan</string>
     <string name="title_activity_camera">Camera</string>
 
     <string name="drop">Effacer la base de données</string>
